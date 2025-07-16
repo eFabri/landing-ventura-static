@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ventura Mudanças - Sua Mudança sem Stress</title>
+  <meta name="description" content="Especialistas em mudanças com mais de 10 anos de experiência. Proteção premium e seguro total para sua tranquilidade. Atendemos todo o Brasil.">
+  <meta name="keywords" content="mudanças, transporte, frete, residencial, comercial, interestaduais, ventura">
+  <meta name="author" content="Ventura Mudanças">
+  
+  <style>
+    /* Reset e Base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: #0f172a;
+      background-color: #ffffff;
+    }
+    
+    /* Design System Variables */
+    :root {
+      --primary: #1e40af;
+      --primary-foreground: #f8fafc;
+      --accent: #eab308;
+      --accent-foreground: #0f172a;
+      --muted: #f1f5f9;
+      --muted-foreground: #64748b;
+      --border: #e2e8f0;
+      --background: #ffffff;
+      --foreground: #0f172a;
+      --card: #ffffff;
+      --card-foreground: #0f172a;
+      --secondary: #f8fafc;
+      --secondary-foreground: #0f172a;
+    }
+    
+    /* Utilities */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.75rem 1.5rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: none;
+      font-size: 1rem;
+    }
+    
+    .btn-primary {
+      background-color: var(--primary);
+      color: var(--primary-foreground);
+    }
+    
+    .btn-primary:hover {
+      background-color: #1d4ed8;
+    }
+    
+    .neon-button {
+      background: linear-gradient(135deg, #eab308, #fbbf24);
+      color: #000;
+      font-weight: bold;
+      padding: 1rem 2rem;
+      border-radius: 9999px;
+      box-shadow: 0 0 20px rgba(234, 179, 8, 0.6), 0 0 40px rgba(234, 179, 8, 0.4);
+      animation: pulse 2s infinite;
+      transform: scale(1);
+      transition: all 0.3s ease;
+    }
+    
+    .neon-button:hover {
+      box-shadow: 0 0 30px rgba(234, 179, 8, 0.8), 0 0 60px rgba(234, 179, 8, 0.6);
+      transform: scale(1.05);
+    }
+    
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+    
+    .card:hover {
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Header */
+    .header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 1rem;
+    }
+    
+    .logo {
+      height: 4rem;
+    }
+    
+    .header-info {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.875rem;
+    }
+    
+    .header-info-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .animated-banner {
+      background: var(--primary);
+      color: white;
+      padding: 0.5rem 0;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    
+    .banner-content {
+      display: inline-block;
+      animation: marquee 25s linear infinite;
+    }
+    
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    
+    .banner-item {
+      display: inline-flex;
+      align-items: center;
+      margin: 0 2rem;
+    }
+    
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=') center/cover;
+      background-attachment: fixed;
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 10;
+    }
+    
+    .hero h1 {
+      font-size: clamp(1.5rem, 5vw, 4rem);
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+      line-height: 1.1;
+    }
+    
+    .hero p {
+      font-size: clamp(1rem, 3vw, 1.5rem);
+      margin-bottom: 2rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      opacity: 0.9;
+    }
+    
+    .text-accent {
+      color: var(--accent);
+    }
+    
+    /* Services Section */
+    .services {
+      padding: 5rem 0;
+      background: var(--muted);
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    
+    .section-title h2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+    
+    .section-title p {
+      font-size: 1.25rem;
+      color: var(--muted-foreground);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    
+    .service-card {
+      background: var(--card);
+      border-radius: 0.75rem;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+    
+    .service-card:hover {
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      transform: translateY(-5px);
+    }
+    
+    .service-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    .service-card:hover .service-image {
+      transform: scale(1.05);
+    }
+    
+    .service-content {
+      padding: 1.5rem;
+    }
+    
+    .service-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+    
+    .service-description {
+      color: var(--muted-foreground);
+      margin-bottom: 1.5rem;
+    }
+    
+    .service-features {
+      list-style: none;
+      margin-bottom: 2rem;
+    }
+    
+    .service-features li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.5rem;
+      font-size: 0.875rem;
+    }
+    
+    .service-features li::before {
+      content: "✓";
+      color: var(--accent);
+      font-weight: bold;
+      margin-right: 0.5rem;
+    }
+    
+    /* Diferenciais Section */
+    .diferenciais {
+      padding: 5rem 0;
+      background: var(--background);
+    }
+    
+    .diferenciais-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+    }
+    
+    .diferencial-card {
+      text-align: center;
+      padding: 2rem;
+      background: var(--card);
+      border-radius: 0.75rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+    
+    .diferencial-card:hover {
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      transform: translateY(-5px);
+    }
+    
+    .diferencial-icon {
+      font-size: 3rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    
+    .diferencial-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+    
+    .diferencial-description {
+      color: var(--muted-foreground);
+    }
+    
+    /* CTA Section */
+    .cta {
+      padding: 5rem 0;
+      background: var(--primary);
+      color: white;
+      text-align: center;
+    }
+    
+    .cta h2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+    }
+    
+    .cta p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    /* Partners Section */
+    .partners {
+      padding: 4rem 0;
+      background: var(--muted);
+    }
+    
+    .partners-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 1.5rem;
+    }
+    
+    .partner-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    
+    .partner-item:hover {
+      transform: scale(1.05);
+    }
+    
+    .partner-logo {
+      width: 50px;
+      height: 50px;
+      background: var(--primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    
+    .partner-name {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--primary);
+    }
+    
+    /* Footer */
+    .footer {
+      background: var(--primary);
+      color: white;
+      padding: 3rem 0;
+    }
+    
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+    
+    .footer-section h3 {
+      color: var(--accent);
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    
+    .footer-section p, .footer-section li {
+      font-size: 0.875rem;
+      margin-bottom: 0.5rem;
+      opacity: 0.9;
+    }
+    
+    .footer-section ul {
+      list-style: none;
+    }
+    
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      padding-top: 2rem;
+      text-align: center;
+      font-size: 0.875rem;
+      opacity: 0.7;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .header-info {
+        gap: 0.5rem;
+        font-size: 0.75rem;
+      }
+      
+      .logo {
+        height: 3rem;
+      }
+      
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .diferenciais-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .partners-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      
+      .footer-content {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    /* Icons */
+    .icon {
+      width: 1rem;
+      height: 1rem;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    
+    .icon-lg {
+      width: 3rem;
+      height: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" alt="Ventura Mudanças" class="logo">
+        <div class="header-info">
+          <div class="header-info-item">
+            <span class="icon">📞</span>
+            <span>(31) 98437-0150</span>
+          </div>
+          <div class="header-info-item">
+            <span class="icon">📍</span>
+            <span>Todo o Brasil</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="animated-banner">
+        <div class="banner-content">
+          <span class="banner-item">🚛 Mudanças municipais</span>
+          <span class="banner-item">📍 Mudanças intermunicipais</span>
+          <span class="banner-item">🛡️ Mudanças interestaduais</span>
+          <span class="banner-item">👥 Alojamentos e canteiro de obras</span>
+          <span class="banner-item">🚛 Mudanças municipais</span>
+          <span class="banner-item">📍 Mudanças intermunicipais</span>
+          <span class="banner-item">🛡️ Mudanças interestaduais</span>
+          <span class="banner-item">👥 Alojamentos e canteiro de obras</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>
+          SUA MUDANÇA SEM STRESS, COM 
+          <span class="text-accent">AGILIDADE</span>,
+          <span class="text-accent">SEGURANÇA</span> COM 
+          QUEM É <span class="text-accent">REFERÊNCIA</span> EM 
+          TODO O BRASIL
+        </h1>
+        <p>
+          Especialistas em mudanças com mais de 10 anos de experiência. 
+          Proteção premium e seguro total para sua tranquilidade.
+        </p>
+        <a href="https://wa.me/5531984370150" target="_blank" class="btn neon-button">
+          QUERO FAZER MEU ORÇAMENTO AGORA
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services">
+    <div class="container">
+      <div class="section-title">
+        <h2>Nossos Serviços</h2>
+        <p>
+          Oferecemos soluções completas em mudanças para atender todas as suas 
+          necessidades, desde residenciais até projetos corporativos complexos.
+        </p>
+      </div>
+      
+      <div class="services-grid">
+        <div class="service-card">
+          <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=" alt="Mudanças Residenciais" class="service-image">
+          <div class="service-content">
+            <h3 class="service-title">Mudanças Residenciais</h3>
+            <p class="service-description">
+              Mudanças completas para residências com total segurança e cuidado especial com seus pertences.
+            </p>
+            <ul class="service-features">
+              <li>Embalagem segura</li>
+              <li>Desmontagem e montagem</li>
+              <li>Transporte seguro</li>
+              <li>Equipe especializada</li>
+            </ul>
+            <a href="https://wa.me/5531984370150" target="_blank" class="btn neon-button" style="width: 100%;">
+              SOLICITAR MEU ATENDIMENTO
+            </a>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=" alt="Mudanças Comerciais" class="service-image">
+          <div class="service-content">
+            <h3 class="service-title">Mudanças Comerciais</h3>
+            <p class="service-description">
+              Transferência de escritórios e empresas com agilidade para não interromper seus negócios.
+            </p>
+            <ul class="service-features">
+              <li>Planejamento detalhado</li>
+              <li>Horários flexíveis</li>
+              <li>Equipe especializada</li>
+              <li>Mudanças corporativas</li>
+            </ul>
+            <a href="https://wa.me/5531984370150" target="_blank" class="btn neon-button" style="width: 100%;">
+              SOLICITAR MEU ATENDIMENTO
+            </a>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=" alt="Canteiro de Obras" class="service-image">
+          <div class="service-content">
+            <h3 class="service-title">Canteiro de Obras</h3>
+            <p class="service-description">
+              Transporte e remoção de equipamentos e materiais de construção com segurança total.
+            </p>
+            <ul class="service-features">
+              <li>Equipamentos especiais</li>
+              <li>Transporte pesado</li>
+              <li>Logística especializada</li>
+              <li>Segurança garantida</li>
+            </ul>
+            <a href="https://wa.me/5531984370150" target="_blank" class="btn neon-button" style="width: 100%;">
+              SOLICITAR MEU ATENDIMENTO
+            </a>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=" alt="Armazenamento Seguro" class="service-image">
+          <div class="service-content">
+            <h3 class="service-title">Armazenamento Seguro</h3>
+            <p class="service-description">
+              Proteção completa dos seus bens em nossos veículos especializados, com sistemas de segurança avançados e monitoramento constante durante todo o transporte.
+            </p>
+            <ul class="service-features">
+              <li>Veículos credenciados</li>
+              <li>Rastreamento GPS</li>
+              <li>Segurança 24h</li>
+              <li>Proteção contra intempéries</li>
+            </ul>
+            <a href="https://wa.me/5531984370150" target="_blank" class="btn neon-button" style="width: 100%;">
+              SOLICITAR MEU ATENDIMENTO
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Diferenciais Section -->
+  <section class="diferenciais">
+    <div class="container">
+      <div class="section-title">
+        <h2>Nossos Diferenciais</h2>
+        <p>
+          O que nos torna únicos no mercado de mudanças é por que somos a escolha 
+          preferida de milhares de clientes em todo o Brasil.
+        </p>
+      </div>
+      
+      <div class="diferenciais-grid">
+        <div class="diferencial-card">
+          <div class="diferencial-icon">🚛</div>
+          <h3 class="diferencial-title">Embalagens Especiais</h3>
+          <p class="diferencial-description">
+            Materiais premium para garantir a máxima segurança dos seus pertences durante o transporte.
+          </p>
+        </div>
+
+        <div class="diferencial-card">
+          <div class="diferencial-icon">🛡️</div>
+          <h3 class="diferencial-title">Seguro Total</h3>
+          <p class="diferencial-description">
+            Cobertura completa contra danos, furtos e acidentes. Sua tranquilidade é nossa prioridade.
+          </p>
+        </div>
+
+        <div class="diferencial-card">
+          <div class="diferencial-icon">👥</div>
+          <h3 class="diferencial-title">Equipe Especializada</h3>
+          <p class="diferencial-description">
+            Profissionais treinados e experientes em mudanças residenciais e corporativas.
+          </p>
+        </div>
+
+        <div class="diferencial-card">
+          <div class="diferencial-icon">⏰</div>
+          <h3 class="diferencial-title">Pontualidade</h3>
+          <p class="diferencial-description">
+            Cumprimos rigorosamente os prazos acordados. Seu tempo é valioso para nós.
+          </p>
+        </div>
+
+        <div class="diferencial-card">
+          <div class="diferencial-icon">⭐</div>
+          <h3 class="diferencial-title">Frota Moderna</h3>
+          <p class="diferencial-description">
+            Veículos novos e bem equipados para garantir o transporte seguro dos seus bens.
+          </p>
+        </div>
+
+        <div class="diferencial-card">
+          <div class="diferencial-icon">✅</div>
+          <h3 class="diferencial-title">Referência Nacional</h3>
+          <p class="diferencial-description">
+            Reconhecidos em todo o Brasil pela qualidade e confiabilidade dos nossos serviços.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta">
+    <div class="container">
+      <h2>Pronto para sua mudança sem stress?</h2>
+      <p>
+        Entre em contato conosco e receba um orçamento personalizado em minutos!
+      </p>
+      <a href="https://wa.me/5531984370150" target="_blank" class="btn neon-button">
+        CONVERSAR NO WHATSAPP
+      </a>
+    </div>
+  </section>
+
+  <!-- Partners Section -->
+  <section class="partners">
+    <div class="container">
+      <div class="section-title">
+        <h2>Nossos Parceiros</h2>
+        <p>
+          Empresas que confiam na Ventura Mudanças para suas operações de transporte e mudanças.
+        </p>
+      </div>
+      
+      <div class="partners-grid">
+        <div class="partner-item">
+          <div class="partner-logo">R</div>
+          <span class="partner-name">Rip</span>
+        </div>
+        <div class="partner-item">
+          <div class="partner-logo">M</div>
+          <span class="partner-name">Magazine Luiza</span>
+        </div>
+        <div class="partner-item">
+          <div class="partner-logo">R</div>
+          <span class="partner-name">Rio Verde</span>
+        </div>
+        <div class="partner-item">
+          <div class="partner-logo">E</div>
+          <span class="partner-name">Electric Minas</span>
+        </div>
+        <div class="partner-item">
+          <div class="partner-logo">F</div>
+          <span class="partner-name">Fagundes</span>
+        </div>
+        <div class="partner-item">
+          <div class="partner-logo">E</div>
+          <span class="partner-name">Express Transportes</span>
+        </div>
+        <div class="partner-item">
+          <div class="partner-logo">P</div>
+          <span class="partner-name">Patrus</span>
+        </div>
+        <div class="partner-item">
+          <div class="partner-logo">N</div>
+          <span class="partner-name">Nexus</span>
+        </div>
+        <div class="partner-item">
+          <div class="partner-logo">I</div>
+          <span class="partner-name">Infravix</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" alt="Ventura Mudanças" style="height: 3rem; filter: brightness(0) invert(1);">
+          <p style="font-style: italic; margin-top: 1rem;">
+            "Transportando preços como se fossem valores"
+          </p>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Contato</h3>
+          <p>📧 comercial@venturamudancas.com.br</p>
+          <p>📞 (31) 98437-0150</p>
+          <p>📍 Sede em Minas Gerais</p>
+          <p>🚚 Atendemos todo o Brasil</p>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Serviços</h3>
+          <ul>
+            <li>• Mudanças Residenciais</li>
+            <li>• Mudanças Comerciais</li>
+            <li>• Mudanças Interestaduais</li>
+            <li>• Guarda e Armazenamento</li>
+            <li>• Canteiro de Obras</li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Atendimento</h3>
+          <p>📅 Segunda a Sexta</p>
+          <p>🕒 08:00 às 18:00</p>
+          <p>📱 Sábado até 12:00</p>
+          <p>🆘 Emergência 24h</p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2025 Ventura Mudanças. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
